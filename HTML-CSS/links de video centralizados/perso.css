@@ -1,0 +1,91 @@
+@charset "UTF-8";
+
+body {
+    min-height: 100vh;
+    background-image: url('japão.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    }
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgb(0, 0, 0, 0.5);
+    z-index: -1;
+}
+.titulo-h1 {
+    text-align: center;
+    color: #ffffff;
+    margin-top: 40px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 270px);
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    text-align: center;
+}
+.video-grid a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 270px;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.3s ease;
+}
+
+.video-grid img {
+    width: 270px; 
+    height: 160px;
+    object-fit: cover;
+    display: block;
+    border-radius: 8px;
+    border: 2px solid #ffffff;
+    transition: transform 0.5s ease-in-out, border 0.2s ease; 
+    cursor: pointer;
+}
+.video-grid img:hover {
+    transform: scale(1.2);
+    border: 2px solid #ffffff;
+}
+.video-grid a:hover img {
+    transform: scale(1.11);
+    border: 2px solid #1e5225;
+}
+.video-grid p {
+    color: #ffffff;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-top: 10px;
+    text-align: center;
+    text-decoration: underline;
+}
+.video-grid a:hover p {
+    color: #ffffff;
+    text-shadow: 0 0 20px #82c42c;
+}
+.centralizar {
+    display: flex;
+    flex-direction: column;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    justify-content: center;
+    align-items: center; 
+    text-align: center;
+    color: #ffffff;
+    gap: 10px;
+    min-height: 100vh;
+    padding: 0 20px;
+}
+.centralizar a {
+    color: #083bc7;
+    text-decoration: underline;
+}
+.centralizar a:hover {
+    color: #ff0077;
+    text-shadow: 0 0 8px #ff0077;
+}
+

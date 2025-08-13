@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curriculo</title>
+    <style>
+        .titulo {
+            color: #ffffff; 
+            text-align: center;
+            margin-top: 55px;
+            font-size: 25px;
+            font-family: arial, sans-serif;
+            margin-bottom: 20px; 
+        }
+        .imagem {
+            width: 150px;
+            display: block;
+            margin: 20px auto;
+            width: 200px;
+            border-radius: 50px;
+        }
+        .descricao {
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+            color: #ffffff;
+            letter-spacing: 1px;
+            line-height: 1.5;
+            font-size: 19px;
+            font-family: "Segoe UI", Arial;
+            margin: 20px auto;
+            width: 80%;
+            text-align: justify;
+            word-break: normal;
+        }
+        body {
+            min-height: 100vh;
+            background-image: url('fundo.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+        .absycor {
+            background-color: rgba(255, 0, 0, 0.6);
+            padding: 30px;
+            border-radius: 15px;
+            color: #ffffff;
+            margin: 40px auto;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+        }
+        h2 {
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+            font-size: 24px;
+            margin-top: 40px;
+            color: #ffffff;
+            font-family: arial;
+            margin: 20px auto;
+            width: 80%;
+            text-align: justify;
+            word-break: normal;
+        }
+        .titulo-linha {
+            border-bottom: 2px solid #9f9dc2d5;
+            padding-bottom: 5px;
+        }
+        .instagram {
+            list-style: none;
+            padding-left: 0;
+            margin: 20px auto;
+            width: 80%;
+        }
+        .instagram li {
+            position: relative;
+            padding-left: 30px;
+            margin-bottom: 10px;
+        }
+        .instagram li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 20px;
+            height: 20px;
+            background-image: url('instagram.png');
+            background-size: cover;
+        }
+        .instagram-color {
+            text-decoration: underline;
+            color: #ffffff;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+    </style>
+</head>
+    <link rel="icon" type="image/png" href="icone-site.png">
+<body>
+    <h1 class="titulo">Meu Currículo</h1>
+    <img src="foto-200x.jpg" alt="minha foto" class="imagem">
+
+    <body>
+        <div class="absycor">
+            <h2 class="h2 titulo-linha">Sobre Mim ✔</h2>
+            <p class="descricao">Olá, meu nome é Marcos Diogo B.F.C Castro.
+             Estou me especializando em desenvolvimento web e também possuo conhecimentos em linguagens como R, PostgreSQL e Python. Atualmente, estou focado em aprimorar minhas habilidades em HTML, CSS e JavaScript. Tenho interesse em aprender mais sobre frameworks como React e Angular, além de explorar o desenvolvimento de aplicativos móveis.</p>
+        </div>
+    </body>
+
+     <body>
+         <div class="absycor">
+             <h2 class="h2 titulo-linha">Experiência Profissional ✔</h2>
+             <p class="descricao">Atualmente estou desenvolvendo um projeto em Python: um conversor de arquivos que pode ser executado diretamente pelo terminal (CMD) em qualquer computador, sem necessidade de instalar programas adicionais. O objetivo é oferecer uma solução leve, prática e multiplataforma para usuários que precisam converter arquivos de forma rápida e eficiente.</p>
+         </div>
+     </body>
+
+     <body>
+         <div class="absycor">
+             <h2 class="h2 titulo-linha">Rede social ✔</h2>
+             <ul class="instagram">
+                 <li><a href="https://www.instagram.com/soul_diogo/" target="_blank"><span class="instagram-color">Instagram</span></a></li>
+             </ul>
+         </div>
+     </body>
+
+</body>
+</html>
