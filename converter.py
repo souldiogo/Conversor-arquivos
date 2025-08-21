@@ -1,5 +1,5 @@
 from pacote_convert import converter_arquivo, encontrar_arquivo
-from pacote_convert import limpar_terminal
+from pacote_convert import limpar_terminal, mostrar_erro
 import winsound
 import os
 import time
@@ -11,19 +11,22 @@ def tocar_som_conclusao():
 # Exibir os formatos suportados
 if __name__ == "__main__":
     colunas = [
-        ["Imagens", "Documentos Word", "PDF"],
-        ["jpeg",           "docx",     "pdf"],
-        ["png",             "",           ""],
-        ["bmp",             "",           ""],
-        ["gif",             "",           ""],
-        ["",                "",           ""]
+        ["Imagens", "Documentos (Word/PDF)", "Planilhas"],
+        ["jpeg",           "docx",                "xlsx"],
+        ["png",             "pdf",                 "csv"],
+        ["bmp",              "",                      ""],
+        ["gif",              "",                      ""],
+        ["",                 "",                      ""]
     ]
 
     def exibir_cabecalho():
-        print("\n" + "Super Conversor".center(41, "="))
-        print("   Formatos suportados para conversão\n")
-        for linha in colunas:
-            print("   {:<10} {:<18} {:<10}".format(*linha))
+        print("\n" + "Super Conversor".center(50, "="))
+        print("    Formatos suportados para conversão")
+        print("-" * 50)
+        print("{:<12} {:<25} {:<12}".format(*colunas[0]))
+        print("-" * 50)
+        for linha in colunas[1:]:
+            print("{:<20} {:<20} {:<10}".format(*linha))
         print("\nDigite 'sair' a qualquer momento para encerrar.\n")
 
     def banner(texto, largura_total=89):
@@ -47,30 +50,30 @@ if __name__ == "__main__":
 
         caminho = encontrar_arquivo(arquivo)
         if not caminho:
-            print("=" * 70)
-            print("Arquivo não encontrado! Verifique se o nome do arquivo está correto.")
-            print("=" * 70 + "\n")
-            time.sleep(6)
+            mostrar_erro("Arquivo não encontrado! Verifique se o nome do arquivo está correto.")
             continue
 
         # Define o formato automaticamente para conversão
         extensao = os.path.splitext(caminho)[1].lower()
-        if extensao in [".doc", ".docx"]:
-            formato = "pdf"
+        if extensao in [".pdf", ".docx"]:
+            formato = "docx" if extensao == ".pdf" else "pdf"
             print(f"Convertendo para PDF. Aguarde...\n")
-        elif extensao == ".pdf":
-            formato = "docx"
-            print(f"Convertendo para documento. Aguarde!...\n")
+            
+        elif extensao in [".xlsx", ".csv"]:
+            formato = "csv" if extensao == ".xlsx" else "xlsx"
+            print(f"Convertendo para {formato.upper()}. Aguarde...\n")
+            
         elif extensao in [".jpg", ".jpeg", ".png", ".bmp", ".gif"]:
-            formato = input("Para qual formato deseja converter: ")
-            if formato == "sair":
-                print("Programa encerrado.")
-                break
+            formato = input("Para qual formato deseja converter: ").strip().lower()
+            if formato not in ["jpg", "jpeg", "png", "bmp", "gif"]:
+                print("Formato inválido. Por favor, escolha entre 'jpg', 'jpeg', 'png', 'bmp' ou 'gif'.")
+                time.sleep(3)
+                continue
         else:
             print("Formato não suportado para conversão.")
             continue
-    
-        #Realiza a conversão do arquivo
+
+        # Realiza a conversão do arquivo
         resultado = converter_arquivo(caminho, formato)
         if resultado.startswith("Erro"):
             print("ERRO".center(41, "="))
