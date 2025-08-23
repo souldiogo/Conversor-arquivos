@@ -28,7 +28,7 @@ O programa consegue converter entre os seguintes formatos:
 ---
 
 ## 🚀 Como Instalar e Usar
-1 - Já com o codigo no vscode, instale o `pyinstaller`:
+1 - Com o código já aberto no VS Code, abra o terminal e digite:
     pip install pyinstaller
     
 2 - Gere o arquivo .exe:
