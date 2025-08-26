@@ -44,6 +44,9 @@ O programa consegue converter entre os seguintes formatos:
         
 4 - Por fim, abra o terminal e digite:
     converter
+    
+📝 Observação: Sempre que for converter um arquivo, informe o formato original dele. 
+Por exemplo, se o arquivo se chama notas_do_ano.pdf, o sistema vai entender que ele é um PDF e vai convertê-lo para .docx automaticamente.
 
 ### 1. Clone o repositório
 
