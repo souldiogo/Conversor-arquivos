@@ -48,6 +48,12 @@ O programa consegue converter entre os seguintes formatos:
 📝 Observação: Sempre que for converter um arquivo, informe o formato original dele. 
 Por exemplo, se o arquivo se chama notas_do_ano.pdf, o sistema vai entender que ele é um PDF e vai convertê-lo para .docx automaticamente.
 
+Se o seu arquivo estiver em um pendrive, o caminho pode variar dependendo da letra atribuída ao dispositivo. Aqui vão dois exemplos:
+Quando o arquivo estiver diretamente no pendrive (sem estar em uma pasta):
+    D:\Documento.docx
+Quando o arquivo estiver dentro de uma pasta no pendrive:
+    D:\MeusArquivos\PDFs\relatorio.pdf
+
 ### 1. Clone o repositório
 
 ```bash
