@@ -37,15 +37,18 @@ def encontrar_arquivo(nome_arquivo):
     # Diretórios padrão do sistema, porém, usa-se diretório completo se estiver no Documents(Documentos)
     documentos_pt = os.path.join(os.path.expanduser("~"), "Documentos")
     documents_en = os.path.join(os.path.expanduser("~"), "Documents")
+    downloads = os.path.join(os.path.expanduser("~"), "Downloads")
+    onedrive_docs = os.path.join(os.path.expanduser("~"), "OneDrive", "Documentos")
 
     diretorios = [
         base_dir,
         os.getcwd(),
-        os.path.expanduser("~/Downloads"),
         documentos_pt,
-        documents_en
+        documents_en,
+        downloads,
+        onedrive_docs
     ]
-    
+
     # Adiciona o diretório do executável (Caso esteja rodando como um exe)
     if getattr(sys, '_MEIPASS', False):
         diretorios.insert(0, sys._MEIPASS)
