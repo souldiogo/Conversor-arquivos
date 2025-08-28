@@ -1,6 +1,6 @@
 # 🧠 Conversor de Arquivos Leve e Prático
 
-Este projeto foi criado com um propósito simples e importante: oferecer uma ferramenta de conversão de arquivos que funcione bem em **notebooks lentos**, 
+Este projeto foi criado com um propósito simples e importante: oferecer uma ferramenta de conversão de arquivos, 
 especialmente útil para **professores** e usuários que não querem (ou não podem) instalar programas pesados.
 
 O conversor é leve, direto ao ponto e roda via **linha de comando (CMD)**, usando a biblioteca `pyinstaller` para gerar um executável simples e portátil.
