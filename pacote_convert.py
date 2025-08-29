@@ -20,7 +20,7 @@ warnings.simplefilter("ignore", category=pd.errors.ParserWarning)
 def mostrar_erro(msg):
     print("ERRO".center(68, "="))
     print(msg)
-    time.sleep(6)
+    time.sleep(3)
 
 # Função para encontrar o caminho do arquivo informado
 def encontrar_arquivo(nome_arquivo):
