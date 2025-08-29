@@ -77,9 +77,9 @@ if __name__ == "__main__":
         resultado = converter_arquivo(caminho, formato)
         if resultado.startswith("Erro"):
             print("ERRO".center(41, "="))
-            time.sleep(5)
+            time.sleep(3)
         else:
             tocar_som_conclusao()
             print("CONCLUÍDO".center(41, "="))
-            time.sleep(6)
+            time.sleep(3)
 
