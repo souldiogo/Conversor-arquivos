@@ -30,7 +30,7 @@ O programa consegue converter entre os seguintes formatos:
 ## 📌Como instalar e usar - Arquivo baixado em zip
 1 - Extraia o arquivo  > Conversor-arquivos-main
 
-2 - Abra à pasta ja extraida no vscode 
+2 - Abra à pasta no vscode 
 
 3 - Com o código aberto, abra o terminal e digite para instalar o pyinstaller:
         pip install pyinstaller
