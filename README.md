@@ -40,6 +40,7 @@ O programa consegue converter entre os seguintes formatos:
         "Criara uma pasta chamada `dist/` dentro do projeto esse é o arquivo .exe
 
 5 - Adicione o caminho completo do `dist/` ao PATH do sistema:
+
         1. Entre nas configurações avançadas do sistema
         2. Na seção Path, clique em novo
         3. Adicione o caminho completo da pasta do `dist/`
