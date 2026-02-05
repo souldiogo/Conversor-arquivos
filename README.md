@@ -37,6 +37,7 @@ O programa consegue converter entre os seguintes formatos:
         pip install pyinstaller
 
 4 - Gerando o arquivo .exe:
+
         pyinstaller --onefile --paths=. converter.py
         "Criara uma pasta chamada `dist/` dentro do projeto esse é o arquivo .exe
 
