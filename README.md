@@ -33,6 +33,7 @@ O programa consegue converter entre os seguintes formatos:
 2 - Abra à pasta no vscode 
 
 3 - Com o código aberto, abra o terminal e digite para instalar o pyinstaller:
+
         pip install pyinstaller
 
 4 - Gerando o arquivo .exe:
