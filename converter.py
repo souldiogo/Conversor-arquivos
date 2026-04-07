@@ -3,11 +3,7 @@ from pacote_convert import limpar_terminal, mostrar_erro
 import winsound
 import os
 import time
-
-# Tocar o som no final da conversão
-def tocar_som_conclusao():
-    winsound.Beep(1000, 300)
-    
+  
 # Exibir os formatos suportados
 if __name__ == "__main__":
     colunas = [
@@ -79,7 +75,7 @@ if __name__ == "__main__":
             print("ERRO".center(41, "="))
             time.sleep(3)
         else:
-            tocar_som_conclusao()
-            print("CONCLUÍDO".center(41, "="))
+            print("CONVERSÃO REALIZADA COM SUCESSO!".center(41, "="))
+            print(f"Arquivo convertido: {resultado}\n")
             time.sleep(3)
 
