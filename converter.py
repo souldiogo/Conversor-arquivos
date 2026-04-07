@@ -1,6 +1,5 @@
 from pacote_convert import converter_arquivo, encontrar_arquivo
 from pacote_convert import limpar_terminal, mostrar_erro
-import winsound
 import os
 import time
   
